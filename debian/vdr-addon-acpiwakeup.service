@@ -1,0 +1,12 @@
+[Unit]
+Description=Set RTC wakeup time for VDR
+
+[Service]
+Type=oneshot
+ExecStart=/etc/init.d/vdr-addon-acpiwakeup start
+ExecReload=/etc/init.d/vdr-addon-acpiwakeup restart
+ExecStop=/etc/init.d/vdr-addon-acpiwakeup stop
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

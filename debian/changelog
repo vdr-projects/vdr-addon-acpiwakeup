@@ -1,3 +1,9 @@
+vdr-addon-acpiwakeup (0.0.13-0yavdr0~noble) noble; urgency=medium
+
+  * new upstream version 
+
+ -- Alexander Grothe <seahawk1986@gmx.de>  Mon, 01 Dec 2025 08:10:38 +0100
+
 vdr-addon-acpiwakeup (0.0.12-0yavdr0~focal) focal; urgency=medium
 
   * new upstream version 
