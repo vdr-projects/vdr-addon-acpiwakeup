@@ -97,4 +97,22 @@ start_test "Should wake up on Thursday 2:00 when shutting down on Tuesday 01:00"
     expect_wakeup_time "2008-05-15 01:55:00"
 end_test
 
+export FAKEDATETIME="2026-01-01 00:00:00"
+start_test "Should wake up on Friday 23:55 when shutting down on Wednesday 00:00"
+    # 2008-05-11 = Sunday
+    ACPI_MAX_MARGIN_HOURS=48 \
+      bash ./testwakeup `wakeuptime '@0'`
+    expect_wakeup_time "2026-01-02 23:55:00"
+end_test
+
+export FAKEDATETIME="2026-01-01 00:00:00"
+start_test "Should wake up on Friday 23:55 when shutting down on Wednesday 00:00"
+    # 2008-05-11 = Sunday
+    ACPI_MAX_MARGIN_HOURS=48 \
+    ACPI_REGULAR_DAYS="5" \
+    ACPI_REGULAR_TIME="02:00" \
+      bash ./testwakeup `wakeuptime '@0'`
+    expect_wakeup_time "2026-01-02 01:55:00"
+end_test
+
 exit $FAILURE
