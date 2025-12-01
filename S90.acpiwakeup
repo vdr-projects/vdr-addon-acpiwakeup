@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # VDR shutdown hook for ACPI - Tobias Grimm <vdr@e-tobi.net>
-# modified by Alexander Grothe <seahawk1986@gmx.de>
+# modified by Alexander Grothe <seahawk1986@gmx.de> and MegaV0lt
 # --------------------------
 #
 # This shutdown hook sets the wakeup time for the next timer using
